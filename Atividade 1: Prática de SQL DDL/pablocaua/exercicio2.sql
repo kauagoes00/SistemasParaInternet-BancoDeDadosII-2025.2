@@ -1,15 +1,11 @@
-# DDl - CREATE, ALTER< DROP
+CREATE DATABASE biblioteca;
 
-# CREATE (DATABASE OU (TABLE)
+USE biblioteca;
 
-CREATE DATABASE loja_roupas;
-
-USE loja_roupas;
-
-CREATE TABLE produtos (
-id_produto INT PRIMARY KEY AUTO_INCREMENT,
-nome VARCHAR(50) NOT NULL,
-descricao VARCHAR(255),
-preco DECIMAL(10,2) NOT NULL,
-estoque INT NOT NULL DEFAULT 0
-);
+CREATE TABLE livro (
+    id_livro INT PRIMARY  KEY,
+    titulo VARCHAR(100) NOT NULL,
+    autor VARCHAR(100) NOT NULL,
+    ano_publicacao INT,
+    isbn VARCHAR(20) UNIQUE NOT NULL
+    );
